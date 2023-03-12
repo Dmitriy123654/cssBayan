@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 img {
+  position: absolute;
   border-radius: 20%;
   border: 1px solid #3d3d3d;
 }
@@ -34,11 +35,12 @@ ul {
   max-width: 800;
 }
 .menu .text_menu {
-  background: #d21b1b;
+  background-color: #666;
   color: #fff;
   display: block;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #000000;
   transition: 0.5s all;
+  border-radius: 2%;
 }
 .menu img {
   background: #d21b1b;
@@ -51,7 +53,41 @@ ul {
   background: #666;
 }
 .menu .text_menu:hover {
-  background: #666;
+  background-color: #000000;
+  padding: 0 0 0 10px;
+}
+/* Всплывающие меню */
+.menu__list {
+  position: relative;
+}
+.menu__drop {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: -9999em;
+  opacity: 0;
+  border-top: 10px solid transparent;
+  transition: 0.7s opacity;
+}
+.menu__list:hover .menu__drop {
+  /* position: relative; как??? */
+  opacity: 1;
+  right: 0;
+}
+
+/* Иконки для всплывающих окон */
+.menu__list::after {
+  content: " ";
+  position: absolute;
+  border: 5px solid;
+  border-color: transparent #eee transparent transparent;
+  top: 0.4em;
+  right: 1em;
+  transition: 0.5s;
+}
+.menu__list:hover::after {
+  /* transform: scale(-1); */
+  transform: rotate(450deg);
 }
 
 /* 
