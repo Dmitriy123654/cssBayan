@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  border-radius: 20%;
+  border: 1px solid #3d3d3d;
+}
+body {
+  padding: 2%;
+  background-color: antiquewhite;
+  font: 1em/1.4em sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+nav {
+  width: 660px;
+  margin: 0 auto;
+}
+p {
+  text-align: center;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; /*убир крудожки*/
+}
+/* Внешний вид меню */
+.side {
+  max-width: 800;
+}
+.menu .text_menu {
+  background: #d21b1b;
+  color: #fff;
+  display: block;
+  border-bottom: 1px solid #666;
+  transition: 0.5s all;
+}
+.menu img {
+  background: #d21b1b;
+  color: #fff;
+  display: block;
+  border-bottom: 1px solid #666;
+  transition: 0.5s all;
+}
+.menu img:hover {
+  background: #666;
+}
+.menu .text_menu:hover {
+  background: #666;
+}
+
+/* 
+.topmenu > li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  outline: none;
+  font-family: "Lora", serif;
+  transition: 0.5s linear;
+}
+.fa {
+  font-family: "FontAwesome";
+  color: inherit;
+  padding-left: 10px;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.three ul {
+  background: #e4efd1;
+}
+.three .submenu {
+  visibility: hidden; 
+  opacity: 0;
+  background: #bad78b;
+}
+.three ul li:hover .submenu {
+  visibility: visible; 
+  opacity: 1;
+}
+.submenu li a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+} */
