@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  position: absolute;
+  border: 1px solid #3d3d3d;
+  /* filter: blur(2px); */
+  /* transition: 1s; */
+  max-width: 100%;
+  border-radius: 25%;
+  text-align: center;
+  display: block;
+}
+body {
+  padding: 2%;
+  background-color: antiquewhite;
+  font: 1em/1.4em sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+nav {
+  width: 660px;
+  margin: 0 auto;
+}
+p {
+  text-align: center;
+  font-family: Arial, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Адапативная верстка */
+@media (max-width: 820px) {
+  .menu img {
+    max-width: 800;
+  }
+  .menu .text_menu {
+    max-width: 800;
+  }
+}
+
+@media (max-width: 320px) {
+  .menu img {
+    max-width: 300;
+  }
+  .menu .text_menu {
+    max-width: 300;
+  }
+}
+/* Анимация текса */
+@keyframes color-change {
+  0% {
+    color: rgb(231, 25, 25);
+  }
+  50% {
+    color: rgb(223, 226, 14);
+  }
+  100% {
+    color: rgb(231, 25, 25);
+  }
+}
+/* Внешний вид меню */
+.side {
+  width: 50%;
+}
+.menu .text_menu {
+  background-color: #666;
+  color: #fff;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #000000;
+  transition: 0.5s all;
+  border-radius: 2%;
+}
+.menu img {
+  background: #d21b1b;
+  color: #fff;
+  display: block;
+  width: 50%;
+  border-bottom: 1px solid #666;
+  transition: 0.5s all;
+}
+.menu img:hover {
+  background: #666;
+  cursor: pointer;
+}
+.menu .text_menu:hover {
+  background-color: #000000;
+  padding: 0 0 0 10px;
+  animation: color-change 2s infinite;
+  cursor: pointer;
+}
+/* Всплывающие меню */
+.menu__list {
+  position: relative;
+}
+.menu__drop {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  right: -9999em;
+  opacity: 0;
+  border-top: 10px solid transparent;
+  transition: 0.7s opacity;
+}
+.menu__list:hover .menu__drop {
+  /* position: relative; как??? */
+  opacity: 1;
+  right: 0;
+}
+
+/* Иконки для всплывающих окон */
+.menu__list::after {
+  content: " ";
+  position: absolute;
+  border: 5px solid;
+  border-color: transparent #eee transparent transparent;
+  top: 0.4em;
+  right: 1em;
+  transition: 0.5s;
+}
+.menu__list:hover::after {
+  background-color: #eee;
+  border: 1px solid #eee;
+  height: 10px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 10px;
+  transform: rotate(-90deg);
+  top: 0.4em;
+  transition-duration: 0.6s;
+  opacity: 0.3;
+}
+/* картинки */
+.tr-img {
+  display: block;
+  cursor: pointer;
+}
