@@ -71,6 +71,7 @@ ul {
 /* Внешний вид меню */
 .side {
   width: 50%;
+  height: 50%;
 }
 .menu .text_menu {
   background-color: #666;
